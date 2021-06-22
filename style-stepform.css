@@ -1,0 +1,19 @@
+.provisional.wb-steps {
+	 counter-reset: fieldset_counter;
+}
+ .provisional.wb-steps .wb-tggle-fildst > legend:before {
+	 content: counter(fieldset_counter) ".\00a0 ";
+	 counter-increment: fieldset_counter;
+}
+ .provisional.wb-steps .wb-tggle-fildst > legend.wb-steps-active {
+	 color: #1c578a;
+}
+ .provisional.wb-steps .wb-tggle-fildst > legend.wb-steps-error {
+	 color: #942826;
+}
+ .provisional.wb-steps .steps-wrapper {
+	 border-bottom: 1px solid #c0c0c0;
+}
+ .provisional.wb-steps .subfields {
+	 border: 0;
+}
