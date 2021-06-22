@@ -1,19 +1,19 @@
-.provisional.wb-steps {
+.provisional.wb-steps-cra {
 	 counter-reset: fieldset_counter;
 }
- .provisional.wb-steps .wb-tggle-fildst > legend:before {
+ .provisional.wb-steps-cra .wb-tggle-fildst > legend:before {
 	 content: counter(fieldset_counter) ". ";
 	 counter-increment: fieldset_counter;
 }
- .provisional.wb-steps .wb-tggle-fildst > legend.wb-steps-active {
+ .provisional.wb-steps-cra .wb-tggle-fildst > legend.wb-steps-active {
 	 color: #1c578a;
 }
- .provisional.wb-steps .wb-tggle-fildst > legend.wb-steps-error {
+ .provisional.wb-steps-cra .wb-tggle-fildst > legend.wb-steps-error {
 	 color: #942826;
 }
- .provisional.wb-steps .steps-wrapper {
+ .provisional.wb-steps-cra .steps-wrapper {
 	 border-bottom: 1px solid #c0c0c0;
 }
- .provisional.wb-steps .subfields {
+ .provisional.wb-steps-cra .subfields {
 	 border: 0;
 }
