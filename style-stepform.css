@@ -2,7 +2,7 @@
 	 counter-reset: fieldset_counter;
 }
  .provisional.wb-steps .wb-tggle-fildst > legend:before {
-	 content: counter(fieldset_counter) ".\00a0 ";
+	 content: counter(fieldset_counter) ". ";
 	 counter-increment: fieldset_counter;
 }
  .provisional.wb-steps .wb-tggle-fildst > legend.wb-steps-active {
