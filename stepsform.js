@@ -246,7 +246,7 @@ $(document).on("keydown keypress", ".wb-steps-cra legend[role=button]", legendBu
 
 
 function legendButton(event) {
-document.querySelector('div[role="button"]').addEventListener('keydown', function(e) {
+document.querySelector('.wb-steps-cra legend[role=button]').addEventListener('keydown', function(e) {
   const keyD = e.key !== undefined ? e.key : e.keyCode;
   // e.key && e.keycode have mixed support - keycode is deprecated but support is greater than e.key
   // I tested within IE11, Firefox, Chrome, Edge (latest) & all had good support for e.key
