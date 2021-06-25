@@ -243,7 +243,8 @@ $(this).addClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");
 };
 
 $(document).on("click", ".wb-steps-cra legend[role=button]", activeLegend); 
- $(".wb-steps-cra legend[role=button]").keypress(function(event){ 
+
+ $(document).on("keypress", ".wb-steps-cra legend[role=button]", function(event){ 
   if (event.which==13 || event.which==32) {alert("test"); activeLegend();}	 
  });
 
