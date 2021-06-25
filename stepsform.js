@@ -235,28 +235,15 @@ $(document).on("click", ".steps-wrapper button", function (event) {
 	$("legend.wb-steps-active").removeAttr("role");
 });
 
-
-$(document).on("click", ".wb-steps-cra legend[role=button]", function (event) { 
-	$(this).addClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");
+function activeLegend() {
+$(this).addClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");
 	$(this).parent().parent().find("legend + div, .buttons").removeClass("hidden");
 	$("legend.wb-steps-active").parents().nextAll().find(".wb-steps-active, legend[role=button]").removeClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");	
-	$("legend.wb-steps-active").parents().nextAll().find("legend + div, .buttons").addClass("hidden");	
-});	
-$(document).on("keydown keypress", ".wb-steps-cra legend[role=button]", legendButton); 
-
-
-function legendButton(event) {
-document.querySelector('.wb-steps-cra legend[role=button]').addEventListener('keydown', function(e) {
-  const keyD = e.key !== undefined ? e.key : e.keyCode;
-  // e.key && e.keycode have mixed support - keycode is deprecated but support is greater than e.key
-  // I tested within IE11, Firefox, Chrome, Edge (latest) & all had good support for e.key
-
-    if ( (keyD === 'Enter' || keyD === 13) || (['Spacebar', ' '].indexOf(keyD) >= 0 || keyD === 32)) {
-    // In IE11 and lower, e.key will equal "Spacebar" instead of ' '
-
-    // Default behavior is prevented to prevent the page to scroll when "space" is pressed
-    e.preventDefault();
-    this.click();
-  }
-});
+	$("legend.wb-steps-active").parents().nextAll().find("legend + div, .buttons").addClass("hidden");		
 };
+
+$(document).on("click", ".wb-steps-cra legend[role=button]", activeLegend); 
+ $(".wb-steps-cra legend[role=button]").keypress(function(event){ 
+  if (event.which==13 || event.which==32) {activeLegend();}	 
+ });
+
