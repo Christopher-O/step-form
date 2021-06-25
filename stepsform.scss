@@ -11,18 +11,39 @@
 
 		> legend {
 			&:before {
+				background-color: #fff;
+				border: 3px solid #6f6f6f;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+				box-sizing: content-box;
 				content: counter(fieldset_counter) ".\00a0 ";
 				counter-increment: fieldset_counter;
+				display: inline-block;
+				height: 1.2em;
+				line-height: 1.2;
+				margin-right: 10px;
+				padding: 4px;
+				text-align: center;
+				width: 1.2em;
 			}
 
 			&.wb-steps-active {
-				color: red;
+				color: #1c578a;
+				
 			}
-
+			&.wb-steps-active:before {
+				background-color: #1c578a;
+				border-color: #1c578a;
+				color: #fff;
+			}
 			&.wb-steps-error {
 				color: #942826;
 			}
 		}
+		> legend:not(.wb-steps-active) {
+			font-size: 0.8em;
+			margin-bottom: 10px;
 	}
 
 	.steps-wrapper {
