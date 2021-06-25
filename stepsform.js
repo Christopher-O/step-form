@@ -235,8 +235,8 @@ $(document).on("click", ".steps-wrapper button", function (event) {
 	$("legend.wb-steps-active").removeAttr("role");
 });
 
-function activeLegend() {
-$(this).addClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");
+function activeLegend($element) {
+$element.addClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");
 	$(this).parent().parent().find("legend + div, .buttons").removeClass("hidden");
 	$("legend.wb-steps-active").parents().nextAll().find(".wb-steps-active, legend[role=button]").removeClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");	
 	$("legend.wb-steps-active").parents().nextAll().find("legend + div, .buttons").addClass("hidden");		
@@ -245,6 +245,6 @@ $(this).addClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");
 $(document).on("click", ".wb-steps-cra legend[role=button]", activeLegend); 
 
  $(document).on("keypress", ".wb-steps-cra legend[role=button]", function(event){ 
-  if (event.which==13 || event.which==32) {activeLegend();}	 
+  if (event.which==13 || event.which==32) {activeLegend($(this));}	 
  });
 
