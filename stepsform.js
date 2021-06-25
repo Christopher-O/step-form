@@ -234,7 +234,7 @@ $(document).on("click", ".steps-wrapper button", function (event) {
 	$("legend.wb-steps-active").removeAttr("role");
 });
 
-$(document).on("click", ".wb-steps legend[role=button]", function (event) { 
+$(document).on("click", ".wb-steps-cra legend[role=button]", function (event) { 
 	$(this).addClass("wb-steps-active").removeAttr("role");
 	$(this).parent().parent().find("legend + div, .buttons").removeClass("hidden");
 	$("legend.wb-steps-active").parents().nextAll().find(".wb-steps-active, legend[role=button]").removeClass("wb-steps-active").removeAttr("role");	
