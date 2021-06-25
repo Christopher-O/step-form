@@ -26,25 +26,26 @@
 				padding: 4px;
 				text-align: center;
 				width: 1.2em;
-			}
+				}
 
 			&.wb-steps-active {
 				color: #1c578a;
 				
-			}
+				}
 			&.wb-steps-active:before {
 				background-color: #1c578a;
 				border-color: #1c578a;
 				color: #fff;
-			}
+				}
 			&.wb-steps-error {
 				color: #942826;
-			}
-		}
-		> legend:not(.wb-steps-active) {
+				}
+			&:not(.wb-steps-active) {
 			font-size: 0.8em;
 			margin-bottom: 10px;
-	}
+				}
+			}
+		
 
 	.steps-wrapper {
 		border-bottom: 1px solid #c0c0c0;
