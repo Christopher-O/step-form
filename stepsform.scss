@@ -17,7 +17,7 @@
 				-moz-border-radius: 50%;
 				border-radius: 50%;
 				box-sizing: content-box;
-				content: counter(fieldset_counter) ".\00a0 ";
+				content: counter(fieldset_counter);
 				counter-increment: fieldset_counter;
 				display: inline-block;
 				height: 1.2em;
