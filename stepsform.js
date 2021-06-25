@@ -227,16 +227,16 @@ wb.add( selector );
 
 } )( jQuery, window, document, wb );
 
-/*Seperate script to add clickable functions to previous steps, will amalgamate into existing script...fix tabindex issue */
+/*Seperate script to add clickable functions to previous steps, will amalgamate into existing script...fix tabindex issue (add tabindex sequence) */
 $(document).on("click", ".steps-wrapper button", function (event) {
-	$("legend.wb-steps-active").parents().prevAll().find("legend").attr("role", "button");			
-	$("legend.wb-steps-active").parents().nextAll().find("legend").removeAttr("role");	
+	$("legend.wb-steps-active").parents().prevAll().find("legend").attr({role: "button", tabindex: "0"});			
+	$("legend.wb-steps-active").parents().nextAll().find("legend").removeAttr("role").attr("tabindex", "-1");	
 	$("legend.wb-steps-active").removeAttr("role");
 });
 
 $(document).on("click", ".wb-steps-cra legend[role=button]", function (event) { 
-	$(this).addClass("wb-steps-active").removeAttr("role");
+	$(this).addClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");
 	$(this).parent().parent().find("legend + div, .buttons").removeClass("hidden");
-	$("legend.wb-steps-active").parents().nextAll().find(".wb-steps-active, legend[role=button]").removeClass("wb-steps-active").removeAttr("role");	
+	$("legend.wb-steps-active").parents().nextAll().find(".wb-steps-active, legend[role=button]").removeClass("wb-steps-active").removeAttr("role").attr("tabindex", "-1");	
 	$("legend.wb-steps-active").parents().nextAll().find("legend + div, .buttons").addClass("hidden");	
 });		
