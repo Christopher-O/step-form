@@ -23,7 +23,7 @@
 				height: 1.2em;
 				line-height: 1.2;
 				margin-left: 5px;
-				margin-right: 10px;
+				margin-right: 15px;
 				padding: 4px;
 				text-align: center;
 				width: 1.2em;
@@ -38,12 +38,13 @@
 				border-color: #1c578a;
 				color: #fff;
 				margin-left: 0px;
+				margin-right: 10px;
 				}
 			&.wb-steps-error {
 				color: #942826;
 				}
 			&:not(.wb-steps-active) {
-			font-size: 0.8em;
+			font-size: 1em;
 			margin-bottom: 10px;
 				}
 			}
