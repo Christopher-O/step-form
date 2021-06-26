@@ -47,7 +47,12 @@
 			font-size: 1em;
 			margin-bottom: 10px;
 				}
+			&[role=button] {
+			text-decoration:underline;	
 			}
+			
+			}
+		
 	}
 
 	.steps-wrapper {
