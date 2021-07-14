@@ -50,8 +50,8 @@
 			&[role=button] {
 			text-decoration:underline;
 			@media print {
-				+ div.hidden {
-				display: inherit;
+				+.hidden {
+				display: inherit!important;
 			}
 				}	
 			}
