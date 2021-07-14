@@ -63,3 +63,15 @@
 		border: 0;
 	}
 }
+@media print
+ .wb-tggle-fildst {
+
+		> legend {
+			&[role=button] {
+			+div.hidden {
+				display: inherit;
+			}
+			}
+	 }
+}
+			
