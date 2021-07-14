@@ -48,7 +48,12 @@
 			margin-bottom: 10px;
 				}
 			&[role=button] {
-			text-decoration:underline;	
+			text-decoration:underline;
+			@media print {
+				+ div.hidden {
+				display: inherit;
+			}
+				}	
 			}
 			
 			}
@@ -63,15 +68,6 @@
 		border: 0;
 	}
 }
-@media print
- .wb-tggle-fildst {
 
-		> legend {
-			&[role=button] {
-			+div.hidden {
-				display: inherit;
-			}
-			}
-	 }
-}
+
 			
